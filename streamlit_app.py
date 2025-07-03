@@ -11,7 +11,7 @@ user_input = st.chat_input("Ask me to book your appointment...")
 if user_input:
     st.session_state.messages.append({"role": "user", "content": user_input})
     with st.spinner("Processing..."):
-        res = requests.post("https://calendar-backend.onrender.com/chat", json={"message": user_input})
+        res = requests.post("https://calendar-ai-backend-nmvc.onrender.com/chat", json={"message": user_input})
         # st.write("Status Code:", res.status_code)
         # st.write("Raw Response:", res.text)
         try:
